@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvDaily = new System.Windows.Forms.DataGridView();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
             this.lblWords = new System.Windows.Forms.Label();
@@ -40,17 +40,17 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnDetalle = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDaily)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numScore)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvDaily
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(421, 143);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(292, 281);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvDaily.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDaily.Location = new System.Drawing.Point(421, 143);
+            this.dgvDaily.Name = "dgvDaily";
+            this.dgvDaily.Size = new System.Drawing.Size(292, 281);
+            this.dgvDaily.TabIndex = 0;
             // 
             // lblFecha
             // 
@@ -159,6 +159,7 @@
             this.btnDetalle.TabIndex = 11;
             this.btnDetalle.Text = "Ver detalle";
             this.btnDetalle.UseVisualStyleBackColor = true;
+            this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
             // 
             // frmDaily
             // 
@@ -177,10 +178,11 @@
             this.Controls.Add(this.lblWords);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.lblFecha);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvDaily);
             this.Name = "frmDaily";
             this.Text = "Daily";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmDaily_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDaily)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numScore)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -189,7 +191,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDaily;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.Label lblWords;
