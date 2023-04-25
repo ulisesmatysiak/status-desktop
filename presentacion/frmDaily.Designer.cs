@@ -51,6 +51,7 @@
             this.dgvDaily.Name = "dgvDaily";
             this.dgvDaily.Size = new System.Drawing.Size(292, 281);
             this.dgvDaily.TabIndex = 0;
+            this.dgvDaily.SelectionChanged += new System.EventHandler(this.dgvDaily_SelectionChanged);
             // 
             // lblFecha
             // 

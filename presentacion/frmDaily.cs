@@ -48,12 +48,27 @@ namespace presentacion
         private void frmDaily_Load(object sender, EventArgs e)
         {
             cargar();
+            columnas();
+            cboHelp.Items.Add("Yes");
+            cboHelp.Items.Add("No");
         }
 
         private void btnDetalle_Click(object sender, EventArgs e)
         {
-            frmDetalle detalle = new frmDetalle();
+            Daily seleccionado;
+            seleccionado = (Daily)dgvDaily.CurrentRow.DataBoundItem;
+
+            frmDetalle detalle = new frmDetalle(seleccionado);
             detalle.ShowDialog();
+            //cargar();
+        }
+
+        private void dgvDaily_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvDaily.CurrentRow != null)
+            {
+                Daily seleccionado = (Daily)dgvDaily.CurrentRow.DataBoundItem;
+            }
         }
     }
 }

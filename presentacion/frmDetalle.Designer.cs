@@ -34,9 +34,9 @@
             this.lblHelp = new System.Windows.Forms.Label();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.cboHelp = new System.Windows.Forms.ComboBox();
-            this.txtHelp = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.txtWords = new System.Windows.Forms.TextBox();
+            this.numStatus = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numStatus)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFecha
@@ -77,6 +77,7 @@
             // 
             // dtpFecha
             // 
+            this.dtpFecha.Enabled = false;
             this.dtpFecha.Location = new System.Drawing.Point(189, 51);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(200, 20);
@@ -84,34 +85,37 @@
             // 
             // cboHelp
             // 
+            this.cboHelp.Enabled = false;
             this.cboHelp.FormattingEnabled = true;
             this.cboHelp.Location = new System.Drawing.Point(189, 369);
             this.cboHelp.Name = "cboHelp";
-            this.cboHelp.Size = new System.Drawing.Size(43, 21);
+            this.cboHelp.Size = new System.Drawing.Size(67, 21);
             this.cboHelp.TabIndex = 5;
             // 
-            // txtHelp
+            // txtWords
             // 
-            this.txtHelp.Location = new System.Drawing.Point(189, 141);
-            this.txtHelp.Multiline = true;
-            this.txtHelp.Name = "txtHelp";
-            this.txtHelp.Size = new System.Drawing.Size(357, 208);
-            this.txtHelp.TabIndex = 6;
+            this.txtWords.Enabled = false;
+            this.txtWords.Location = new System.Drawing.Point(189, 141);
+            this.txtWords.Multiline = true;
+            this.txtWords.Name = "txtWords";
+            this.txtWords.Size = new System.Drawing.Size(357, 208);
+            this.txtWords.TabIndex = 6;
             // 
-            // numericUpDown1
+            // numStatus
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(189, 99);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(43, 20);
-            this.numericUpDown1.TabIndex = 7;
+            this.numStatus.Enabled = false;
+            this.numStatus.Location = new System.Drawing.Point(189, 103);
+            this.numStatus.Name = "numStatus";
+            this.numStatus.Size = new System.Drawing.Size(43, 20);
+            this.numStatus.TabIndex = 7;
             // 
             // frmDetalle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.txtHelp);
+            this.Controls.Add(this.numStatus);
+            this.Controls.Add(this.txtWords);
             this.Controls.Add(this.cboHelp);
             this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.lblHelp);
@@ -120,7 +124,8 @@
             this.Controls.Add(this.lblFecha);
             this.Name = "frmDetalle";
             this.Text = "frmDetalle";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.Load += new System.EventHandler(this.frmDetalle_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.numStatus)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,7 +139,7 @@
         private System.Windows.Forms.Label lblHelp;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.ComboBox cboHelp;
-        private System.Windows.Forms.TextBox txtHelp;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.TextBox txtWords;
+        private System.Windows.Forms.NumericUpDown numStatus;
     }
 }
