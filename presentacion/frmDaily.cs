@@ -49,8 +49,6 @@ namespace presentacion
         {
             cargar();
             columnas();
-            cboHelp.Items.Add("Yes");
-            cboHelp.Items.Add("No");
         }
 
         private void btnDetalle_Click(object sender, EventArgs e)
@@ -68,6 +66,56 @@ namespace presentacion
             if (dgvDaily.CurrentRow != null)
             {
                 Daily seleccionado = (Daily)dgvDaily.CurrentRow.DataBoundItem;
+            }
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            DailyNegocio negocio = new DailyNegocio();
+            Daily nuevo = new Daily();
+
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("Agregar nuevo daily?", "Agregando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
+                {
+                    nuevo.Fecha = dtpFecha.Value;
+                    nuevo.Score = int.Parse(numScore.Value);
+                    nuevo.Words = txtWords.Text;
+                    if (chkHelp.Checked)
+                    {
+                        nuevo.Helped = true;
+                    }
+                    else
+                        nuevo.Helped = false;
+                    negocio.agregar(nuevo);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            DailyNegocio negocio = new DailyNegocio();
+            Daily seleccionado;
+
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿De verdad queres eliminarlo?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Daily)dgvDaily.CurrentRow.DataBoundItem;
+                    negocio.eliminar(seleccionado.Id);
+                    cargar();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
     }

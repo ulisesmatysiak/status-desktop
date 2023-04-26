@@ -31,12 +31,11 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
             this.lblWords = new System.Windows.Forms.Label();
-            this.lblHelp = new System.Windows.Forms.Label();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
-            this.cboHelp = new System.Windows.Forms.ComboBox();
             this.txtWords = new System.Windows.Forms.TextBox();
-            this.numStatus = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.numStatus)).BeginInit();
+            this.numScore = new System.Windows.Forms.NumericUpDown();
+            this.chkHelp = new System.Windows.Forms.CheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this.numScore)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFecha
@@ -66,15 +65,6 @@
             this.lblWords.TabIndex = 2;
             this.lblWords.Text = "Words:";
             // 
-            // lblHelp
-            // 
-            this.lblHelp.AutoSize = true;
-            this.lblHelp.Location = new System.Drawing.Point(93, 373);
-            this.lblHelp.Name = "lblHelp";
-            this.lblHelp.Size = new System.Drawing.Size(35, 13);
-            this.lblHelp.TabIndex = 3;
-            this.lblHelp.Text = "Help?";
-            // 
             // dtpFecha
             // 
             this.dtpFecha.Enabled = false;
@@ -82,15 +72,6 @@
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(200, 20);
             this.dtpFecha.TabIndex = 4;
-            // 
-            // cboHelp
-            // 
-            this.cboHelp.Enabled = false;
-            this.cboHelp.FormattingEnabled = true;
-            this.cboHelp.Location = new System.Drawing.Point(189, 369);
-            this.cboHelp.Name = "cboHelp";
-            this.cboHelp.Size = new System.Drawing.Size(67, 21);
-            this.cboHelp.TabIndex = 5;
             // 
             // txtWords
             // 
@@ -101,31 +82,40 @@
             this.txtWords.Size = new System.Drawing.Size(357, 208);
             this.txtWords.TabIndex = 6;
             // 
-            // numStatus
+            // numScore
             // 
-            this.numStatus.Enabled = false;
-            this.numStatus.Location = new System.Drawing.Point(189, 103);
-            this.numStatus.Name = "numStatus";
-            this.numStatus.Size = new System.Drawing.Size(43, 20);
-            this.numStatus.TabIndex = 7;
+            this.numScore.Enabled = false;
+            this.numScore.Location = new System.Drawing.Point(189, 103);
+            this.numScore.Name = "numScore";
+            this.numScore.Size = new System.Drawing.Size(43, 20);
+            this.numScore.TabIndex = 7;
+            // 
+            // chkHelp
+            // 
+            this.chkHelp.AutoSize = true;
+            this.chkHelp.Location = new System.Drawing.Point(96, 389);
+            this.chkHelp.Name = "chkHelp";
+            this.chkHelp.Size = new System.Drawing.Size(54, 17);
+            this.chkHelp.TabIndex = 8;
+            this.chkHelp.Text = "Help?";
+            this.chkHelp.UseVisualStyleBackColor = true;
             // 
             // frmDetalle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.numStatus);
+            this.Controls.Add(this.chkHelp);
+            this.Controls.Add(this.numScore);
             this.Controls.Add(this.txtWords);
-            this.Controls.Add(this.cboHelp);
             this.Controls.Add(this.dtpFecha);
-            this.Controls.Add(this.lblHelp);
             this.Controls.Add(this.lblWords);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.lblFecha);
             this.Name = "frmDetalle";
             this.Text = "frmDetalle";
             this.Load += new System.EventHandler(this.frmDetalle_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numScore)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,10 +126,9 @@
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.Label lblWords;
-        private System.Windows.Forms.Label lblHelp;
         private System.Windows.Forms.DateTimePicker dtpFecha;
-        private System.Windows.Forms.ComboBox cboHelp;
         private System.Windows.Forms.TextBox txtWords;
-        private System.Windows.Forms.NumericUpDown numStatus;
+        private System.Windows.Forms.NumericUpDown numScore;
+        private System.Windows.Forms.CheckBox chkHelp;
     }
 }

@@ -32,14 +32,13 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
             this.lblWords = new System.Windows.Forms.Label();
-            this.lblHelp = new System.Windows.Forms.Label();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.txtWords = new System.Windows.Forms.TextBox();
-            this.cboHelp = new System.Windows.Forms.ComboBox();
             this.numScore = new System.Windows.Forms.NumericUpDown();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnDetalle = new System.Windows.Forms.Button();
+            this.chkHelp = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDaily)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numScore)).BeginInit();
             this.SuspendLayout();
@@ -80,15 +79,6 @@
             this.lblWords.TabIndex = 3;
             this.lblWords.Text = "Words:";
             // 
-            // lblHelp
-            // 
-            this.lblHelp.AutoSize = true;
-            this.lblHelp.Location = new System.Drawing.Point(35, 403);
-            this.lblHelp.Name = "lblHelp";
-            this.lblHelp.Size = new System.Drawing.Size(35, 13);
-            this.lblHelp.TabIndex = 4;
-            this.lblHelp.Text = "Help?";
-            // 
             // dtpFecha
             // 
             this.dtpFecha.Location = new System.Drawing.Point(130, 30);
@@ -103,14 +93,6 @@
             this.txtWords.Name = "txtWords";
             this.txtWords.Size = new System.Drawing.Size(295, 232);
             this.txtWords.TabIndex = 6;
-            // 
-            // cboHelp
-            // 
-            this.cboHelp.FormattingEnabled = true;
-            this.cboHelp.Location = new System.Drawing.Point(130, 403);
-            this.cboHelp.Name = "cboHelp";
-            this.cboHelp.Size = new System.Drawing.Size(100, 21);
-            this.cboHelp.TabIndex = 7;
             // 
             // numScore
             // 
@@ -142,6 +124,7 @@
             this.btnAgregar.TabIndex = 9;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEliminar
             // 
@@ -151,6 +134,7 @@
             this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnDetalle
             // 
@@ -162,20 +146,29 @@
             this.btnDetalle.UseVisualStyleBackColor = true;
             this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
             // 
+            // chkHelp
+            // 
+            this.chkHelp.AutoSize = true;
+            this.chkHelp.Location = new System.Drawing.Point(38, 407);
+            this.chkHelp.Name = "chkHelp";
+            this.chkHelp.Size = new System.Drawing.Size(54, 17);
+            this.chkHelp.TabIndex = 12;
+            this.chkHelp.Text = "Help?";
+            this.chkHelp.UseVisualStyleBackColor = true;
+            // 
             // frmDaily
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.chkHelp);
             this.Controls.Add(this.btnDetalle);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.numScore);
-            this.Controls.Add(this.cboHelp);
             this.Controls.Add(this.txtWords);
             this.Controls.Add(this.dtpFecha);
-            this.Controls.Add(this.lblHelp);
             this.Controls.Add(this.lblWords);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.lblFecha);
@@ -196,13 +189,12 @@
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.Label lblWords;
-        private System.Windows.Forms.Label lblHelp;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.TextBox txtWords;
-        private System.Windows.Forms.ComboBox cboHelp;
         private System.Windows.Forms.NumericUpDown numScore;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnDetalle;
+        private System.Windows.Forms.CheckBox chkHelp;
     }
 }

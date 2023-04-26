@@ -33,12 +33,9 @@ namespace presentacion
                 if (daily != null)
                 {
                     dtpFecha.Value = daily.Fecha;
-                    //numStatus.Value = int.Parse(daily.Score);
+                    numScore.Value = daily.Score;
                     txtWords.Text = daily.Words;
-                    cboHelp.ValueMember = "Helped";
-                    cboHelp.DisplayMember = "Helped";
-                    
-                    //cboHelp.SelectedValue = daily.Helped;
+                    chkHelp.Checked = daily.Helped;
                 }
             }
             catch (Exception ex)
