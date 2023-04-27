@@ -80,7 +80,7 @@ namespace presentacion
                 if (respuesta == DialogResult.Yes)
                 {
                     nuevo.Fecha = dtpFecha.Value;
-                    nuevo.Score = int.Parse(numScore.Value);
+                    nuevo.Score = int.Parse(numScore.Value.ToString());
                     nuevo.Words = txtWords.Text;
                     if (chkHelp.Checked)
                     {
@@ -89,6 +89,7 @@ namespace presentacion
                     else
                         nuevo.Helped = false;
                     negocio.agregar(nuevo);
+                    cargar();
                 }
             }
             catch (Exception ex)
