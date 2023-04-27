@@ -41,7 +41,7 @@ namespace presentacion
             dgvDaily.Columns["Id"].Visible = false;
             dgvDaily.Columns["Fecha"].Width = 75;
             dgvDaily.Columns["Score"].Width = 50;
-            dgvDaily.Columns["Words"].Visible = false;
+            dgvDaily.Columns["Words"].Width = 75;
             dgvDaily.Columns["Helped"].Width = 50;
         }
 

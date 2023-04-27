@@ -104,6 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.chkHelp);
             this.Controls.Add(this.numScore);
@@ -112,8 +113,12 @@
             this.Controls.Add(this.lblWords);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.lblFecha);
+            this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmDetalle";
-            this.Text = "frmDetalle";
+            this.Text = "Detalle";
             this.Load += new System.EventHandler(this.frmDetalle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numScore)).EndInit();
             this.ResumeLayout(false);

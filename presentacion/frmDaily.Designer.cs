@@ -45,10 +45,16 @@
             // 
             // dgvDaily
             // 
+            this.dgvDaily.AllowUserToAddRows = false;
+            this.dgvDaily.AllowUserToDeleteRows = false;
+            this.dgvDaily.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDaily.BackgroundColor = System.Drawing.Color.White;
+            this.dgvDaily.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvDaily.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvDaily.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDaily.Location = new System.Drawing.Point(421, 143);
+            this.dgvDaily.Location = new System.Drawing.Point(439, 143);
             this.dgvDaily.Name = "dgvDaily";
-            this.dgvDaily.Size = new System.Drawing.Size(292, 281);
+            this.dgvDaily.Size = new System.Drawing.Size(480, 295);
             this.dgvDaily.TabIndex = 0;
             this.dgvDaily.SelectionChanged += new System.EventHandler(this.dgvDaily_SelectionChanged);
             // 
@@ -118,32 +124,47 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(452, 26);
+            this.btnAgregar.BackColor = System.Drawing.Color.Black;
+            this.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnAgregar.FlatAppearance.BorderSize = 2;
+            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Location = new System.Drawing.Point(439, 30);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.Size = new System.Drawing.Size(180, 34);
             this.btnAgregar.TabIndex = 9;
             this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(452, 66);
+            this.btnEliminar.BackColor = System.Drawing.Color.Black;
+            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnEliminar.FlatAppearance.BorderSize = 2;
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Location = new System.Drawing.Point(739, 30);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(180, 34);
             this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnDetalle
             // 
-            this.btnDetalle.Location = new System.Drawing.Point(601, 25);
+            this.btnDetalle.BackColor = System.Drawing.Color.Black;
+            this.btnDetalle.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnDetalle.FlatAppearance.BorderSize = 2;
+            this.btnDetalle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnDetalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDetalle.Location = new System.Drawing.Point(587, 86);
             this.btnDetalle.Name = "btnDetalle";
-            this.btnDetalle.Size = new System.Drawing.Size(75, 23);
+            this.btnDetalle.Size = new System.Drawing.Size(180, 34);
             this.btnDetalle.TabIndex = 11;
             this.btnDetalle.Text = "Ver detalle";
-            this.btnDetalle.UseVisualStyleBackColor = true;
+            this.btnDetalle.UseVisualStyleBackColor = false;
             this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
             // 
             // chkHelp
@@ -160,8 +181,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(944, 450);
             this.Controls.Add(this.chkHelp);
             this.Controls.Add(this.btnDetalle);
             this.Controls.Add(this.btnEliminar);
@@ -173,6 +194,9 @@
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.dgvDaily);
+            this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
             this.Name = "frmDaily";
             this.Text = "Daily";
             this.Load += new System.EventHandler(this.frmDaily_Load);
